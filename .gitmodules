@@ -1,0 +1,3 @@
+[submodule "uav-cs528"]
+	path = uav-cs528
+	url = https://github.com/Yonava/uav-cs528

@@ -1,0 +1,4 @@
+__pycache__
+virtual/*
+data.csv
+svm_detailed_results.csv
