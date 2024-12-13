@@ -1,4 +1,8 @@
-__pycache__
+__pycache__/*
 virtual/*
 data.csv
 svm_detailed_results.csv
+hw3.py
+*.log
+IMU/build/*
+IMU/.*

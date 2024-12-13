@@ -9,7 +9,7 @@ import time
 
 
 class DroneController:
-    def __init__(self, max_range=60):
+    def __init__(self, max_range=40):
         """
         Initialize the DroneController with a maximum range.
 
@@ -18,8 +18,8 @@ class DroneController:
         """
         self.drone = TelloDroneBuilder()
         self.lock = threading.Lock()
-        self.max_range = max_range  # in cm
-        self.position = {"x": 0, "y": 0, "z": 0}  # initial position
+        self.max_range = max_range
+        self.position = {"x": 0, "y": 0, "z": 0}
         logging.info(f"DroneController initialized with max_range={self.max_range} cm.")
 
     def set_position(self, x=0, y=0, z=0):
@@ -129,6 +129,11 @@ class DroneController:
             self.drone.rotate(90)
             logging.info("Rotated right by 90 degrees.")
 
+    def flip(self):
+        with self.lock:
+            self.drone.flip_back()
+            logging.info("Flipping ")
+
     def land_and_disconnect(self, max_retries=3):
         with self.lock:
             logging.info("Attempting to land the drone.")
@@ -136,7 +141,7 @@ class DroneController:
                 logging.info(f"Send command: 'land' (Attempt {attempt})")
                 self.drone.land()
                 logging.info(f"Sent 'land' command (Attempt {attempt}).")
-                time.sleep(2)  # Wait before next attempt
+                time.sleep(2)
             logging.critical(
                 "Failed to land the drone after multiple attempts. Initiating emergency stop."
             )

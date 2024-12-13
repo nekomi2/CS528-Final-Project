@@ -76,9 +76,8 @@ class TelloDroneBuilder:
             self.drone.rotate_counter_clockwise(abs(angle))
         return self
 
-    def flip(self, direction):
-        print(f"Performing flip: {direction}")
-        self.drone.flip(direction)
+    def flip_back(self):
+        self.drone.flip_back()
         return self
 
     def capture_image(self, filename="capture.jpg"):

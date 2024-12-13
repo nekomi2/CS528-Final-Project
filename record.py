@@ -5,14 +5,10 @@ import serial
 from recording_manager import RecordingManager
 from serial_reader import SerialReaderThread
 from plot_live import plot_live
-from utils import graceful_exit
 import signal
 
 
 def main():
-    signal.signal(signal.SIGINT, graceful_exit)
-    signal.signal(signal.SIGTERM, graceful_exit)
-
     folder_name = input("Enter the name for the data folder: ").strip()
     if not folder_name:
         print("Folder name cannot be empty.")
@@ -50,7 +46,6 @@ def main():
         ser.close()
         recording_manager.stop()
         print("Recording stopped. Exiting.")
-
 
 if __name__ == "__main__":
     main()
