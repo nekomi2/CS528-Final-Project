@@ -134,6 +134,11 @@ class DroneController:
             self.drone.flip_back()
             logging.info("Flipping ")
 
+    def fetch(self):
+        with self.lock:
+            self.drone.fly_square()
+            logging.info("Spinning")
+
     def land_and_disconnect(self, max_retries=3):
         with self.lock:
             logging.info("Attempting to land the drone.")

@@ -9,7 +9,15 @@ import joblib
 import os
 from tqdm import tqdm
 
-lookup = {"Up": 0, "Down": 1, "Left": 2, "Right": 3, "Neutral": 4, "Clap": 5}
+lookup = {
+    "Up": 0,
+    "Down": 1,
+    "Left": 2,
+    "Right": 3,
+    "Neutral": 4,
+    "Clap": 5,
+    "Fetch": 6,
+}
 
 
 def load_data(data_dir, window_size=800):

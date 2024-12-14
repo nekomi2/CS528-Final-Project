@@ -66,6 +66,7 @@ class PredictionThread(threading.Thread):
             3: "Right",
             4: "Neutral",
             5: "Clap",
+            6: "Fetch",
         }
 
         self.drone = drone_controller
@@ -145,6 +146,10 @@ class PredictionThread(threading.Thread):
                 self.drone.rotate_left()
             elif gesture == "Right":
                 self.drone.rotate_right()
+            elif gesture == "Clap":
+                self.drone.flip()
+            elif gesture == "Fetch":
+                self.drone.fetch()
             else:
                 logging.warning(f"Unknown gesture: {gesture}")
         except Exception as e:
