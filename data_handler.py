@@ -1,5 +1,3 @@
-# data_handler.py
-
 import threading
 from queue import Empty
 

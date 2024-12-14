@@ -1,10 +1,8 @@
-# drone_controller.py
-
 import threading
 import logging
 from TelloDroneBuilder import (
     TelloDroneBuilder,
-)  # Ensure this class is correctly implemented
+)
 import time
 
 
