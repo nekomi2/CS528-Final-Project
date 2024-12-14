@@ -2,6 +2,8 @@
 
 # Usage
 
+Build the IMU code, then flash it onto your ESP32.
+
 Record your gestures with `record.py`. Record at least 20 samples per gesture. They will be in folders named 'Up', etc. Move these to the Data folder 'Data/Up'.
 
 Train the svm using `train.py`. Update this file with the gesture labels you recorded.
