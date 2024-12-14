@@ -2,7 +2,7 @@
 
 # Usage
 
-Build the IMU code, then flash it onto your ESP32.
+Build the IMU code, then flash it onto your ESP32. Check that you have pins 9 and 10 for SCL and SDA respectively.
 
 Record your gestures with `record.py`. Record at least 20 samples per gesture. They will be in folders named 'Up', etc. Move these to the Data folder 'Data/Up'.
 
