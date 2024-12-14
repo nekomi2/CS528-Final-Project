@@ -5,7 +5,6 @@ import serial
 from recording_manager import RecordingManager
 from serial_reader import SerialReaderThread
 from plot_live import plot_live
-import signal
 
 
 def main():
@@ -46,6 +45,7 @@ def main():
         ser.close()
         recording_manager.stop()
         print("Recording stopped. Exiting.")
+
 
 if __name__ == "__main__":
     main()

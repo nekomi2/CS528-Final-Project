@@ -37,7 +37,7 @@ class PredictionThread(threading.Thread):
         drone_controller,
         data_queue,
         window_size=800,
-        confidence_threshold=0.7,
+        confidence_threshold=0.4,
         cooldown=0,
     ):
         super().__init__()

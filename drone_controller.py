@@ -136,7 +136,7 @@ class DroneController:
 
     def fetch(self):
         with self.lock:
-            self.drone.fly_square()
+            self.drone.fly_square(20)
             logging.info("Spinning")
 
     def land_and_disconnect(self, max_retries=3):
