@@ -1,5 +1,5 @@
-# Installation
-
+# Overview
+This projects controls a DJI Tello UAV using gestures captured by an MPU6050 on an ESP32-S3.
 # Usage
 
 Build the IMU code, then flash it onto your ESP32. Check that you have pins 9 and 10 for SCL and SDA respectively.
