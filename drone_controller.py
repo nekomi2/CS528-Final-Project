@@ -7,7 +7,7 @@ import time
 
 
 class DroneController:
-    def __init__(self, max_range=40):
+    def __init__(self, max_range=60):
         """
         Initialize the DroneController with a maximum range.
 
